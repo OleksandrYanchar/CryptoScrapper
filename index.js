@@ -11,14 +11,6 @@ async function run() {
 
     await page.waitForSelector('.transactions-table', { visible: true }); //wait for the page to load
 
-    // const transactions = await page.evaluate(() => Array.from(document.querySelectorAll('.transactions-table .transactions-table-link-row'), (e) => ({
-    //     link: e.querySelector('a').href,
-    //     id: e.querySelectorAll('.transactions-table-cell')[0].innerText,
-    //     amount: e.querySelectorAll('.transactions-table-cell')[1].innerText,
-    //     fee: e.querySelectorAll('.transactions-table-cell')[2].innerText,
-    //     size: e.querySelectorAll('.transactions-table-cell')[3].innerText,
-    // })));
-
     const transactions = await page.evaluate(() => {
         let content = document.querySelectorAll('.transactions-table .transactions-table-link-row');
         let transactionsArray = [];
