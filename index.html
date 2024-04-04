@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crypto Scraper</title>
+</head>
+<body>
+  <button id="run-script-button">Click Me</button>
+  <script>
+    document.getElementById('run-script-button').addEventListener('click', () => {
+      fetch('http://localhost:3000/data')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>
