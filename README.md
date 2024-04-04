@@ -22,14 +22,21 @@ tsc --init
 ```bash
 tsc
 ```
-
-#### Running server-process:
+#### Running backend server-process:
 ```bash
 node dist/server.js
 ```
 
-#### Testing:
-```bash
-open http://localhost:3001/
-and click button
-```
+#### Live server setup:
+
+* Install extension Live Server
+
+<img src="pictures/server.png">
+
+* Run Live Server:
+
+<img src="pictures/run-server.png">
+
+### Resault:
+    if all good data should be in data.json
+<img src="pictures/data.png">
